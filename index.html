@@ -7,20 +7,20 @@
     
     <link rel="stylesheet" href="css/style.css">
     <script src="Script/script.js" defer></script>
-    <title>Document</title>
+    <title>Pig-game</title>
 </head>
 <body>
 
     <div id="formPage">
 
-    <h1>Welcome to pig game!</h1>
+    <h1 id="formTitle">Welcome to pig-game!</h1>
 
     <form id="registrationForm">
 
         <h3>Create user!</h3>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required>
 
         <br>
 
@@ -29,7 +29,19 @@
 </div>
 
 <div id="mainPage">
-    <h1>TEST</h1>
+    <h1 id="greeting"></h1>
+    
+    <button id="rollButton">Roll Dice!</button>
+
+    <button id="freezeRoundButton">Freeze Round!</button>
+
+    <div id="diceResult"></div>
+
+    <div id="score">
+        <h2>Current Score: <span id="currentScore">0</span></h2>
+        <h2>Total Score: <span id="totalScore">0</span></h2> 
+        <h2>Total Rounds: <span id="totalRounds">0</span></h2>
+    </div>
 </div>
 
 
