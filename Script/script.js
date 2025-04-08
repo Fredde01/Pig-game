@@ -2,8 +2,11 @@ const form = document.getElementById("registrationForm");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
+    
     localStorage.setItem("username", username);
     showPage("mainPage");
+    getUsername();
+   
     history.pushState({ page: "formPage" }, "Form page", "#formPage");
     history.pushState({ page: "mainPage" }, "Main Page", "#mainPage");
 });
@@ -18,6 +21,7 @@ function showPage(pageId) {
 function getUsername() {
     const username = localStorage.getItem("username");
     const greetingElement = document.getElementById("greeting");
+  
     if (username) {
         greetingElement.textContent = `Let's play a game, ${username}!`;
     } else {
